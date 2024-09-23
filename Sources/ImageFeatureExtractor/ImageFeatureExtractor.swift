@@ -11,7 +11,7 @@ import LemonUtils
 import UIKit
 
 public struct ImagePairWithID: Sendable, Identifiable {
-    let uuid = UUID()
+    let uuid: UUID
     // 这个是remove background后的图片
     public let noBackgroundImage: UIImage
     // 有background的图片
@@ -21,7 +21,8 @@ public struct ImagePairWithID: Sendable, Identifiable {
         return uuid
     }
 
-    public init(noBackgroundImage: UIImage, originalImage: UIImage) {
+    public init(uuid: UUID, noBackgroundImage: UIImage, originalImage: UIImage) {
+        self.uuid = uuid
         self.noBackgroundImage = noBackgroundImage
         self.originalImage = originalImage
     }
