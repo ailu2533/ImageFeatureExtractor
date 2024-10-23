@@ -1,5 +1,5 @@
 {
-  "originHash" : "5bfd5d718f5b04705c62e96dff5975fbabf44ea72cb8d60472931323a453cf7e",
+  "originHash" : "601ba2c8b7b4bbe20cc1d3f5c20bc6338e88dc709a1b10b099392b7d9ddc2233",
   "pins" : [
     {
       "identity" : "colorkit",
@@ -20,66 +20,12 @@
       }
     },
     {
-      "identity" : "datehelper",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/melvitax/DateHelper",
-      "state" : {
-        "revision" : "76d0840daab7288fc99b04a4c23d504f0394e083",
-        "version" : "5.0.1"
-      }
-    },
-    {
       "identity" : "dominantcolor",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/indragiek/DominantColor.git",
       "state" : {
         "revision" : "aadc3d48c1f7f8abc7d03561d42c19188b1d4625",
         "version" : "0.2.2"
-      }
-    },
-    {
-      "identity" : "horizoncalendar",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/airbnb/HorizonCalendar",
-      "state" : {
-        "revision" : "a360d71a1255f0b24e378f2ee31a7a7d674a49b6",
-        "version" : "2.0.0"
-      }
-    },
-    {
-      "identity" : "lemondateutils",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/ailu2533/LemonDateUtils.git",
-      "state" : {
-        "branch" : "main",
-        "revision" : "65d01211bd8113e63beee39590839824582db69e"
-      }
-    },
-    {
-      "identity" : "lemonutils",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/ailu2533/LemonUtils.git",
-      "state" : {
-        "branch" : "main",
-        "revision" : "89162da89ef9e9070137c486e829d30affe70ab5"
-      }
-    },
-    {
-      "identity" : "swift-collections",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/apple/swift-collections.git",
-      "state" : {
-        "revision" : "3d2dc41a01f9e49d84f0a3925fb858bed64f702d",
-        "version" : "1.1.2"
-      }
-    },
-    {
-      "identity" : "swiftlintplugins",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/SimplyDanny/SwiftLintPlugins",
-      "state" : {
-        "revision" : "7c80ce6f142164b0201871e580b021d1b2c69804",
-        "version" : "0.57.0"
       }
     }
   ],

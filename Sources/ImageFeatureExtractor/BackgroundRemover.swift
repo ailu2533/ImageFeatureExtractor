@@ -8,10 +8,14 @@
 import Foundation
 import UIKit
 
-extension CIImage: @unchecked Sendable {}
+extension CIImage: @unchecked @retroactive Sendable {}
 
 public final class BackgroundRemover: Sendable {
+    // MARK: Lifecycle
+
     public init() {}
+
+    // MARK: Public
 
     public func processImageToUIImage(_ image: UIImage) async throws -> UIImage {
         #if targetEnvironment(simulator)
@@ -46,7 +50,7 @@ public final class BackgroundRemover: Sendable {
 
         let ciImage = CIImage(cgImage: cgImage)
 
-        return try await Task.detached(priority: .userInitiated) {
+        return await Task.detached(priority: .userInitiated) {
             let visionHelper = ImageVisionHelper()
             guard let maskedImage = visionHelper.removeBackground(from: ciImage, croppedToInstanceExtent: true) else {
 //                throw BackgroundRemoverError.processingFailed
@@ -61,23 +65,6 @@ public final class BackgroundRemover: Sendable {
 }
 
 // MARK: - Error Types
-
-public enum ImageLoadError: Error, LocalizedError {
-    case invalidData
-    case loadFailed(Error)
-    case processingFailed(Error)
-
-    public var errorDescription: String? {
-        switch self {
-        case .invalidData:
-            return "无法加载图片数据"
-        case let .loadFailed(error):
-            return "加载图片失败: \(error.localizedDescription)"
-        case let .processingFailed(error):
-            return "处理图片失败: \(error.localizedDescription)"
-        }
-    }
-}
 
 enum BackgroundRemoverError: Error {
     case invalidImageData

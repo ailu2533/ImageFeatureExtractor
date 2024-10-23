@@ -15,7 +15,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/ailu2533/CustomColor.git", branch: "main"),
-        .package(url: "https://github.com/ailu2533/LemonUtils.git", branch: "main"),
+//        .package(url: "https://github.com/ailu2533/LemonUtils.git", branch: "main"),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -24,7 +24,7 @@ let package = Package(
             name: "ImageFeatureExtractor",
             dependencies: [
                 .product(name: "CustomColor", package: "CustomColor"),
-                .product(name: "LemonUtils", package: "LemonUtils")
+//                .product(name: "LemonUtils", package: "LemonUtils")
 
             ],
             resources: [

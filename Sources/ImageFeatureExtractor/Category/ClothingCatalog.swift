@@ -13,23 +13,23 @@ import SwiftUI
 extension LocalizedStringKey: @unchecked Sendable {}
 
 public struct ClothingSubcategory: Identifiable, Sendable {
-    public let id: UUID
-    public let rawValue: String
-    public let displayLabel: String
+    // MARK: Lifecycle
 
     init(id: UUID, rawValue: String, displayLabel: String) {
         self.id = id
         self.rawValue = rawValue
         self.displayLabel = displayLabel
     }
-}
 
-public struct ClothingCategory: Identifiable, Sendable {
+    // MARK: Public
+
     public let id: UUID
     public let rawValue: String
     public let displayLabel: String
+}
 
-    public let subcategories: [ClothingSubcategory]
+public struct ClothingCategory: Identifiable, Sendable {
+    // MARK: Lifecycle
 
     init(id: UUID, rawValue: String, displayLabel: String, subcategories: [ClothingSubcategory]) {
         self.id = id
@@ -37,6 +37,14 @@ public struct ClothingCategory: Identifiable, Sendable {
         self.displayLabel = displayLabel
         self.subcategories = subcategories
     }
+
+    // MARK: Public
+
+    public let id: UUID
+    public let rawValue: String
+    public let displayLabel: String
+
+    public let subcategories: [ClothingSubcategory]
 }
 
 public struct ClothingCatalog {
@@ -85,14 +93,6 @@ public struct ClothingCatalog {
         categories.flatMap { $0.subcategories }
     }
 
-    public static func subcategory(forRawValue rawValue: String) -> ClothingSubcategory? {
-        allSubcategories.first { $0.rawValue == rawValue }
-    }
-
-    public static func category(forSubcategory subcategory: ClothingSubcategory) -> ClothingCategory? {
-        categories.first { $0.subcategories.contains { $0.id == subcategory.id } }
-    }
-
     public static var labels: [String] {
         allSubcategories.map { $0.rawValue }
     }
@@ -109,6 +109,14 @@ public struct ClothingCatalog {
     // 从rawValue到displayLabel的映射
     public static var rawValueToDisplayLabel: [String: String] {
         Dictionary(uniqueKeysWithValues: allSubcategories.map { ($0.rawValue, $0.displayLabel) })
+    }
+
+    public static func subcategory(forRawValue rawValue: String) -> ClothingSubcategory? {
+        allSubcategories.first { $0.rawValue == rawValue }
+    }
+
+    public static func category(forSubcategory subcategory: ClothingSubcategory) -> ClothingCategory? {
+        categories.first { $0.subcategories.contains { $0.id == subcategory.id } }
     }
 
     public static func localizedLabel(_ label: String) -> String {
