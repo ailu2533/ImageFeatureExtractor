@@ -4,14 +4,8 @@ import Foundation
 import Vision
 import VisionKit
 
-public struct ImageVisionHelper {
-    // MARK: Lifecycle
-
-    public init() {}
-
-    // MARK: Public
-
-    public func extractAllInstances(from image: CIImage, croppedToInstanceExtent: Bool) -> [CIImage] {
+enum ImageVisionHelper {
+    static func extractAllInstances(from image: CIImage, croppedToInstanceExtent: Bool) -> [CIImage] {
         let request = VNGenerateForegroundInstanceMaskRequest()
         let handler = VNImageRequestHandler(ciImage: image)
 
@@ -81,16 +75,16 @@ public struct ImageVisionHelper {
 //        )
 //    }
 
-    // MARK: Internal
+    static func render(ciImage img: CIImage) -> CGImage {
+        let context = CIContext(options: nil)
 
-    func render(ciImage img: CIImage) -> CGImage {
-        guard let cgImage = CIContext(options: nil).createCGImage(img, from: img.extent) else {
+        guard let cgImage = context.createCGImage(img, from: img.extent) else {
             fatalError("failed to render CIImage")
         }
         return cgImage
     }
 
-    func removeBackground(from image: CIImage, croppedToInstanceExtent: Bool) -> CIImage? {
+    static func createMask(from image: CIImage, croppedToInstanceExtent: Bool) -> CIImage? {
         let request = VNGenerateForegroundInstanceMaskRequest()
         let handler = VNImageRequestHandler(ciImage: image)
 

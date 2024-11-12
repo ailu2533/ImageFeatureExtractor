@@ -17,7 +17,7 @@ public final class BackgroundRemover: Sendable {
 
     // MARK: Public
 
-    public func processImageToUIImage(_ image: UIImage) async throws -> UIImage {
+    public func removeBackground(_ image: UIImage) throws -> UIImage {
         #if targetEnvironment(simulator)
             return image
         #endif
@@ -28,39 +28,17 @@ public final class BackgroundRemover: Sendable {
 
         let ciImage = CIImage(cgImage: cgImage)
 
-        return try await Task.detached(priority: .userInitiated) {
-            let visionHelper = ImageVisionHelper()
-            guard let maskedImage = visionHelper.removeBackground(from: ciImage, croppedToInstanceExtent: true) else {
-                throw BackgroundRemoverError.processingFailed
-            }
-
-            let renderedCGImage = visionHelper.render(ciImage: maskedImage)
-            return UIImage(cgImage: renderedCGImage)
-        }.value
-    }
-
-    public func processImageToPNGData(_ image: UIImage) async throws -> Data? {
-        #if targetEnvironment(simulator)
-            return image.pngData()
-        #endif
-
-        guard let cgImage = image.cgImage else {
-            throw BackgroundRemoverError.invalidImageData
+        guard let maskedImage = ImageVisionHelper.createMask(from: ciImage, croppedToInstanceExtent: true) else {
+            throw BackgroundRemoverError.processingFailed
         }
 
-        let ciImage = CIImage(cgImage: cgImage)
+        let context = CIContext(options: nil)
 
-        return await Task.detached(priority: .userInitiated) {
-            let visionHelper = ImageVisionHelper()
-            guard let maskedImage = visionHelper.removeBackground(from: ciImage, croppedToInstanceExtent: true) else {
-//                throw BackgroundRemoverError.processingFailed
-                // TODO: 待优化
-                return image.pngData()
-            }
+        guard let renderedCGImage = context.createCGImage(maskedImage, from: maskedImage.extent) else {
+            fatalError("failed to render CIImage")
+        }
 
-            let renderedCGImage = visionHelper.render(ciImage: maskedImage)
-            return UIImage(cgImage: renderedCGImage).pngData()
-        }.value
+        return UIImage(cgImage: renderedCGImage, scale: image.scale, orientation: image.imageOrientation)
     }
 }
 

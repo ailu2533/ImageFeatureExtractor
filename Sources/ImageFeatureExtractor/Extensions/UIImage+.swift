@@ -114,6 +114,29 @@ public extension UIImage {
             return thumbnail.jpegData(compressionQuality: 0.9) // Adjust compression quality as needed
         }
     }
+
+    func thumbnailImage(maxThumbnailHeight: CGFloat = 80, maxThumbnailWidth: CGFloat = 80) -> UIImage {
+        // Check if the original image is smaller than the required thumbnail size
+        guard size.width > maxThumbnailWidth || size.height > maxThumbnailHeight else {
+            return self
+        }
+
+        // Calculate the scale ratio while maintaining the aspect ratio
+        let widthRatio = maxThumbnailWidth / size.width
+        let heightRatio = maxThumbnailHeight / size.height
+        let scale = min(widthRatio, heightRatio)
+
+        // Define the new size based on the scale ratio
+        let newSize = CGSize(width: size.width * scale, height: size.height * scale)
+
+        // Use UIGraphicsImageRenderer for high-quality scaling
+        let renderer = UIGraphicsImageRenderer(size: newSize)
+        let thumbnail = renderer.image { _ in
+            draw(in: CGRect(origin: .zero, size: newSize))
+        }
+
+        return thumbnail
+    }
 }
 
 public enum ImageFormat {

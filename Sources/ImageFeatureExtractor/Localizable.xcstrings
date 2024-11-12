@@ -151,16 +151,6 @@
         }
       }
     },
-    "Other" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "其他"
-          }
-        }
-      }
-    },
     "Pants" : {
       "localizations" : {
         "zh" : {

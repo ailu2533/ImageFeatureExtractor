@@ -49,9 +49,9 @@ public struct ClothingCategory: Identifiable, Sendable {
 
 public struct ClothingCatalog {
     public static let categories: [ClothingCategory] = [
-        ClothingCategory(id: otherCategoryUUID, rawValue: "Other", displayLabel: String(localized: "Other", bundle: .module), subcategories: [
-            ClothingSubcategory(id: otherCategorySubUUID, rawValue: "Other", displayLabel: String(localized: "Other", bundle: .module)),
-        ]),
+//        ClothingCategory(id: otherCategoryUUID, rawValue: "Other", displayLabel: String(localized: "Other", bundle: .module), subcategories: [
+//            ClothingSubcategory(id: otherCategorySubUUID, rawValue: "Other", displayLabel: String(localized: "Other", bundle: .module)),
+//        ]),
 
         ClothingCategory(id: UUID(uuidString: "01913f53-1b26-7690-bde3-d520df805046")!, rawValue: "Tops", displayLabel: String(localized: "Tops", bundle: .module), subcategories: [
             ClothingSubcategory(id: UUID(uuidString: "01910e4e-3b31-7153-ac42-e681089aa19f")!, rawValue: "T-Shirt", displayLabel: String(localized: "T-Shirt", bundle: .module)),
