@@ -5,12 +5,15 @@
 //  Created by ailu on 2024/8/11.
 //
 
-import Foundation
-
+import Algorithms
 import Foundation
 import SwiftUI
 
+// MARK: - LocalizedStringKey + Sendable
+
 extension LocalizedStringKey: @unchecked Sendable {}
+
+// MARK: - ClothingSubcategory
 
 public struct ClothingSubcategory: Identifiable, Sendable {
     // MARK: Lifecycle
@@ -27,6 +30,8 @@ public struct ClothingSubcategory: Identifiable, Sendable {
     public let rawValue: String
     public let displayLabel: String
 }
+
+// MARK: - ClothingCategory
 
 public struct ClothingCategory: Identifiable, Sendable {
     // MARK: Lifecycle
@@ -46,6 +51,8 @@ public struct ClothingCategory: Identifiable, Sendable {
 
     public let subcategories: [ClothingSubcategory]
 }
+
+// MARK: - ClothingCatalog
 
 public struct ClothingCatalog {
     public static let categories: [ClothingCategory] = [
@@ -103,7 +110,12 @@ public struct ClothingCatalog {
 
     // 从UUID到子类别的DisplayLabel
     public static var categoryUUID2Label: [UUID: String] {
-        Dictionary(uniqueKeysWithValues: allSubcategories.map { ($0.id, $0.rawValue) })
+        Dictionary(uniqueKeysWithValues:
+            chain(
+                categories.map { ($0.id, $0.rawValue) },
+                allSubcategories.map { ($0.id, $0.rawValue) }
+            )
+        )
     }
 
     // 从rawValue到displayLabel的映射

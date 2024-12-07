@@ -15,6 +15,8 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/ailu2533/CustomColor.git", branch: "main"),
+        .package(url: "https://github.com/apple/swift-algorithms.git", .upToNextMajor(from: "1.2.0")),
+
 //        .package(url: "https://github.com/ailu2533/LemonUtils.git", branch: "main"),
     ],
     targets: [
@@ -24,6 +26,8 @@ let package = Package(
             name: "ImageFeatureExtractor",
             dependencies: [
                 .product(name: "CustomColor", package: "CustomColor"),
+                .product(name: "Algorithms", package: "swift-algorithms"),
+
 //                .product(name: "LemonUtils", package: "LemonUtils")
 
             ],
