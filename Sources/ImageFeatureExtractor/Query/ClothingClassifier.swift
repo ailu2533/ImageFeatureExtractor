@@ -26,39 +26,30 @@ public final class ClothingClassifier: Sendable {
             fatalError("初始化编码器失败: \(error)")
         }
 
-        labels = ClothingCatalog.labels
+        guard let textEmbeddingURL = Bundle.module.url(forResource: "categoryEmbedding", withExtension: "json")
+        else {
+            fatalError("categoryEmbedding.json not found")
+        }
 
-        if loadTextEmbeddingFromJson {
-            guard let textEmbeddingURL = Bundle.module.url(forResource: "textEmbedding", withExtension: "json")
-            else {
-                fatalError("textEmbedding.json not found")
+        // 从JSON文件中读取文本嵌入数据
+        do {
+            let data = try Data(contentsOf: textEmbeddingURL)
+            let embeddingsArrays = try JSONDecoder().decode([String: [Float]].self, from: data)
+
+            var tmpLabels: [String] = []
+            var tmpEmbeddings: [MLShapedArray<Float32>] = []
+
+            for (key, array) in embeddingsArrays {
+                tmpLabels.append(key)
+                let embedding = MLShapedArray<Float32>(scalars: array.map { Float32($0) }, shape: [1, array.count])
+                tmpEmbeddings.append(embedding)
             }
 
-            // 从JSON文件中读取文本嵌入数据
-            do {
-                let data = try Data(contentsOf: textEmbeddingURL)
-                let embeddingsArrays = try JSONDecoder().decode([[Float]].self, from: data)
-                labelEmbeddings = embeddingsArrays.map { array in
-                    MLShapedArray<Float32>(scalars: array.map { Float32($0) }, shape: [1, array.count])
-                }
-            } catch {
-                fatalError("Failed to load or decode text embeddings: \(error)")
-            }
-        } else {
-            // 使用本地变量来初始化 labelEmbeddings
+            labels = tmpLabels
+            labelEmbeddings = tmpEmbeddings
 
-            let textEncoder = self.textEncoder!
-            labelEmbeddings = labels.compactMap { label in
-                try? textEncoder.computeTextEmbedding(prompt: label)
-            }
-
-            // 将 labelEmbeddings 转换为可序列化的格式并序列化为 JSON
-            let embeddingsAsArrays = labelEmbeddings.map { $0.scalars }
-            let encoder = JSONEncoder()
-            if let jsonData = try? encoder.encode(embeddingsAsArrays),
-               let jsonString = String(data: jsonData, encoding: .utf8) {
-                print("JSON String: \(jsonString)")
-            }
+        } catch {
+            fatalError("Failed to load or decode text embeddings: \(error)")
         }
     }
 
