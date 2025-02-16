@@ -1,5 +1,5 @@
 {
-  "originHash" : "17f723be6ea79e2423405de5adbfcb0e879c5c696352799d0574e267bed8262d",
+  "originHash" : "f7876e396e65c8818f09e49398e570a2a78c6c8224df2e28276694284fe3eb07",
   "pins" : [
     {
       "identity" : "colorkit",
@@ -16,7 +16,7 @@
       "location" : "https://github.com/ailu2533/CustomColor.git",
       "state" : {
         "branch" : "main",
-        "revision" : "c8022ad73fb4fa56445c377027859d5be9e093a5"
+        "revision" : "a58107fb42c6da40fdba86975d0aef2576f999dc"
       }
     },
     {

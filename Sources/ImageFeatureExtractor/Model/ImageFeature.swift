@@ -5,6 +5,7 @@
 //  Created by Lu Ai on 2024/10/23.
 //
 
+import CustomColor
 import Foundation
 
 public struct ImageFeature: Sendable, Identifiable {
@@ -14,7 +15,7 @@ public struct ImageFeature: Sendable, Identifiable {
         imageUUID: UUID,
         thumbnailData: Data?,
         bigImageData: Data?,
-        colorHexCode: String?,
+        colorHexCode: CustomColor?,
         categoryLabel: CategoryLabel?,
         secondaryCategoryUUID: UUID?
     ) {
@@ -32,7 +33,7 @@ public struct ImageFeature: Sendable, Identifiable {
     public let thumbnailData: Data?
     public let bigImageData: Data?
 
-    public let colorHexCode: String?
+    public let colorHexCode: CustomColor?
 
     // 分类信息
     public let categoryLabel: CategoryLabel?

@@ -34,10 +34,10 @@ public struct ImageFeatureExtractor: Sendable {
     private func processImage(_ imagePairWithID: ImagePairWithID, options: ImageFeatureOptions) async -> ImageFeature {
         let noBackgroundImage = imagePairWithID.noBackgroundImage
 
-        var colorHexCode: String?
+        var customColor: CustomColor?
         if options.includeColorInfo {
             let colorMatchResult = await ColorMatcher.extractDominantColor(from: noBackgroundImage)
-            colorHexCode = colorMatchResult.predictColor?.hex
+            customColor = colorMatchResult.predictColor
         }
 
         var categorySecondaryUUID: UUID?
@@ -65,7 +65,7 @@ public struct ImageFeatureExtractor: Sendable {
             imageUUID: imagePairWithID.id,
             thumbnailData: nil,
             bigImageData: nil,
-            colorHexCode: colorHexCode,
+            colorHexCode: customColor,
             categoryLabel: nil,
             secondaryCategoryUUID: categorySecondaryUUID
         )
