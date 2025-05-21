@@ -161,7 +161,7 @@ extension ClothingClassifier {
             .map(\.self)
     }
 
-    private func similarity_score(text_features: MLShapedArray<Float32>, image_features: MLShapedArray<Float32>) -> Float {
+    public func similarity_score(text_features: MLShapedArray<Float32>, image_features: MLShapedArray<Float32>) -> Float {
         // 归一化图像特征
         let normalizedImageFeatures = normalize(image_features)
 
