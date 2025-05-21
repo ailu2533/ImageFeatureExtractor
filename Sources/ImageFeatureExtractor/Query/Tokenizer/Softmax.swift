@@ -17,10 +17,12 @@ func softmax(inputs: [Float]) -> [Float] {
 
     var filterParameters = BNNSFilterParameters()
 
-    let activationLayer = BNNSFilterCreateVectorActivationLayer(&inDescription,
-                                                                &outDescription,
-                                                                &activation,
-                                                                &filterParameters)
+    let activationLayer = BNNSFilterCreateVectorActivationLayer(
+        &inDescription,
+        &outDescription,
+        &activation,
+        &filterParameters
+    )
     BNNSFilterApply(activationLayer, inputs, &outputs)
 
     return outputs

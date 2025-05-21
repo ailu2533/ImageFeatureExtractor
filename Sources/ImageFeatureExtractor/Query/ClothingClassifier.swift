@@ -10,25 +10,24 @@ import CoreML
 import Foundation
 import UIKit
 
-public final class ClothingClassifier: Sendable {
+// MARK: - ClothingClassifier
+
+public actor ClothingClassifier {
     // MARK: Lifecycle
 
-    public init(loadTextEmbeddingFromJson: Bool) {
-        do {
-            if loadTextEmbeddingFromJson {
-                textEncoder = nil
-            } else {
-                textEncoder = try TextEncoder()
-            }
-
-            imgEncoder = try ImgEncoder()
-        } catch {
-            fatalError("初始化编码器失败: \(error)")
+    private init(loadTextEmbeddingFromJson: Bool) throws {
+        // 初始化textEncoder
+        if loadTextEmbeddingFromJson {
+            textEncoder = nil
+        } else {
+            textEncoder = try TextEncoder()
         }
 
-        guard let textEmbeddingURL = Bundle.module.url(forResource: "categoryEmbedding", withExtension: "json")
-        else {
-            fatalError("categoryEmbedding.json not found")
+        // 初始化imgEncoder
+        imgEncoder = try ImgEncoder()
+
+        guard let textEmbeddingURL = Bundle.module.url(forResource: "categoryEmbedding", withExtension: "json") else {
+            throw ImageLoadError.invalidData
         }
 
         // 从JSON文件中读取文本嵌入数据
@@ -47,84 +46,17 @@ public final class ClothingClassifier: Sendable {
 
             labels = tmpLabels
             labelEmbeddings = tmpEmbeddings
-
-        } catch {
-            fatalError("Failed to load or decode text embeddings: \(error)")
         }
     }
 
     // MARK: Public
 
-    public static func loadAsync(loadTextEmbeddingFromJson: Bool) async -> ClothingClassifier {
-        return await Task.detached {
-            return ClothingClassifier(loadTextEmbeddingFromJson: loadTextEmbeddingFromJson)
+    // MARK: - Factory Method
+
+    public static func create(loadTextEmbeddingFromJson: Bool) async throws -> ClothingClassifier {
+        return try await Task.detached(priority: .userInitiated) {
+            try ClothingClassifier(loadTextEmbeddingFromJson: loadTextEmbeddingFromJson)
         }.value
-    }
-
-    public func predictTopNLabels(image: UIImage, topN: Int) async throws -> [CategoryLabel] {
-        guard let normalImage = image.removeTransparency() else {
-            return []
-        }
-
-        let imgEmbedding = try await imgEncoder.computeImgEmbedding(img: normalImage)
-
-        let scores = await withTaskGroup(of: (Float, String).self) { group in
-            for (embedding, label) in zip(labelEmbeddings, labels) {
-                group.addTask { [self] in
-                    let cos = similarity_score(text_features: embedding, image_features: imgEmbedding)
-                    return (cos, label)
-                }
-            }
-            return await group.reduce(into: [(Float, String)]()) { $0.append($1) }
-        }
-
-        // 提取相似度值
-        let similarityValues = scores.map { $0.0 }
-
-        // 计算 softmax
-        let softmaxValues = softmax(inputs: similarityValues)
-
-        // 将 softmax 值与标签配对
-        let labelProbabilities = zip(softmaxValues, scores.map { $0.1 })
-            .map { CategoryLabel(label: $0.1, probability: $0.0) }
-
-        // 按概率排序并返回前 N 个标签
-        return Array(labelProbabilities.sorted(by: { $0.probability > $1.probability }).prefix(topN))
-    }
-
-    // MARK: Internal
-
-    func predictLabel(image: UIImage) async throws -> String {
-        let imgEmbedding = try await imgEncoder.computeImgEmbedding(img: image)
-
-        let cosines = await withTaskGroup(of: (Float, String).self) { group in
-            for (embedding, label) in zip(labelEmbeddings, labels) {
-                group.addTask { [self] in
-                    let cos = similarity_score(text_features: embedding, image_features: imgEmbedding)
-                    return (cos, label)
-                }
-            }
-            return await group.reduce(into: [(Float, String)]()) { $0.append($1) }
-        }
-
-        // 提取余弦相似度值
-        let cosineValues = cosines.map { $0.0 }
-
-        // 计算 softmax
-        let softmaxValues = softmax(inputs: cosineValues)
-
-        // 将 softmax 值与标签配对
-        let labelProbabilities = zip(softmaxValues, cosines.map { $0.1 })
-
-        print(labelProbabilities)
-
-        // 找到最高概率的标签
-        if let (maxProb, maxLabel) = labelProbabilities.max(by: { $0.0 < $1.0 }) {
-            // 如果最高概率大于 0.7，返回该标签，否则返回"未知"
-            return maxProb > 0.9 ? maxLabel : "\(maxLabel) \(maxProb)"
-        }
-
-        return "未知"
     }
 
     // MARK: Private
@@ -133,6 +65,75 @@ public final class ClothingClassifier: Sendable {
     private let imgEncoder: ImgEncoder
     private let labels: [String]
     private let labelEmbeddings: [MLShapedArray<Float32>]
+}
+
+// MARK: - PredictResult
+
+struct PredictResult {
+    let label: String
+    let cos: Float
+}
+
+extension ClothingClassifier {
+    public func predictTopNLabels(image: UIImage, topN: Int) async throws -> [CategoryLabel] {
+        // 使用灰度图
+        guard let normalImage = image.removeTransparency() else {
+            return []
+        }
+
+        let imgEmbedding = try await imgEncoder.computeImgEmbedding(img: normalImage)
+
+        // 计算所有标签的相似度
+        let scores = calculateSimilarityScores(
+            imageEmbedding: imgEmbedding,
+            labelEmbeddings: labelEmbeddings,
+            labels: labels
+        )
+
+        // 计算概率分布
+        let probabilities = calculateProbabilities(from: scores)
+
+        // 获取前N个最可能的标签
+        return getTopNLabels(from: probabilities, count: topN)
+    }
+
+    // MARK: - Private Methods
+
+    private func calculateSimilarityScores(
+        imageEmbedding: MLShapedArray<Float32>,
+        labelEmbeddings: [MLShapedArray<Float32>],
+        labels: [String]
+    ) -> [PredictResult] {
+        zip(labelEmbeddings, labels).map { embedding, label in
+            let similarity = similarity_score(
+                text_features: embedding,
+                image_features: imageEmbedding
+            )
+            return PredictResult(label: label, cos: similarity)
+        }
+    }
+
+    private func calculateProbabilities(from scores: [PredictResult]) -> [CategoryLabel] {
+        let similarityValues = scores.map(\.cos)
+        let softmaxValues = softmax(inputs: similarityValues)
+
+        return zip(softmaxValues, scores).map { probability, result in
+            CategoryLabel(
+                label: result.label,
+                probability: probability
+            )
+        }
+    }
+
+    private func getTopNLabels(
+        from probabilities: [CategoryLabel],
+        count: Int
+    ) -> [CategoryLabel] {
+        probabilities
+            .sorted { $0.probability > $1.probability }
+            .prefix(count)
+            .map { $0 }
+    }
 
     private func cosine_similarity(A: MLShapedArray<Float32>, B: MLShapedArray<Float32>) -> Float {
         let magnitude = vDSP.sumOfSquares(A.scalars).squareRoot() * vDSP.sumOfSquares(B.scalars).squareRoot()

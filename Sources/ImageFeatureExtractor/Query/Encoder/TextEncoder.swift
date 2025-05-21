@@ -8,25 +8,16 @@ import Foundation
     import UIKit
 #endif
 
-extension TextEncoder_float32: @unchecked Sendable {}
+// MARK: - TextEncoder
+
+// extension TextEncoder_float32: @unchecked Sendable {}
 
 ///  A model for encoding text
-public struct TextEncoder: @unchecked Sendable {
-    /// Text tokenizer
-//    let tokenizer: BPETokenizer
-
-    let clipTokenizer: CLIPTokenizer
-
-    /// Embedding model
-    let model: TextEncoder_float32
-
-    let inputLength = 77
-
-    /// Prediction queue
-    let queue = DispatchQueue(label: "textencoder.predict")
+public struct TextEncoder {
+    // MARK: Lifecycle
 
     init(
-         configuration config: MLModelConfiguration = .init()
+        configuration config: MLModelConfiguration = .init()
     ) throws {
 //        let textEncoderURL = baseURL.appending(path: "TextEncoder_float32.mlmodelc")
 
@@ -50,23 +41,27 @@ public struct TextEncoder: @unchecked Sendable {
         clipTokenizer = CLIPTokenizer(vocabulary: vocabURL.path(), merges: mergesURL.path())
     }
 
-    public func computeTextEmbedding(prompt: String) throws -> MLShapedArray<Float32> {
-        let promptEmbedding = try encode(prompt)
-//        Logging.shared.debug("\(prompt) \(promptEmbedding)")
-        return promptEmbedding
-    }
+    // MARK: Internal
 
-    /**
-     /// Creates text encoder which embeds a tokenized string
-     ///
-     /// - Parameters:
-     ///   - tokenizer: Tokenizer for input text
-     ///   - model: Model for encoding tokenized text
-     public init(tokenizer: BPETokenizer, model: MLModel) {
-         self.tokenizer = tokenizer
-         self.model = model
-     }
-      */
+    /// Text tokenizer
+//    let tokenizer: BPETokenizer
+
+    let clipTokenizer: CLIPTokenizer
+
+    /// Embedding model
+    let model: TextEncoder_float32
+
+    let inputLength = 77
+
+    // MARK: Private
+
+    private func encode(ids: [Int32]) throws -> MLShapedArray<Float32> {
+        let inputArray = MLShapedArray<Int32>(scalars: ids, shape: [1, inputLength])
+
+        let result = try model.prediction(prompt: inputArray)
+
+        return result.embOutputShapedArray
+    }
 
     /// Encode input text/string
     ///
@@ -76,19 +71,7 @@ public struct TextEncoder: @unchecked Sendable {
     private func encode(_ text: String) throws -> MLShapedArray<Float32> {
         let ids = clipTokenizer.tokenize(text: text, truncation: true, maxLength: inputLength, paddingToken: 0)
 
-        print(text, ids)
-
         // Use the model to generate the embedding
         return try encode(ids: ids)
-    }
-
-    func encode(ids: [Int32]) throws -> MLShapedArray<Float32> {
-//        let floatIds = ids.map { Int32($0) }
-        let inputArray = MLShapedArray<Int32>(scalars: ids, shape: [1, inputLength])
-
-//        print(inputArray)
-        let result = try queue.sync { try model.prediction(prompt: inputArray) }
-
-        return result.embOutputShapedArray
     }
 }

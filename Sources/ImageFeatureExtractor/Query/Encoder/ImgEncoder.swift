@@ -9,23 +9,28 @@ import CoreML
 import Foundation
 import UIKit
 
-extension ImageEncoder_float32: @unchecked Sendable {}
+// MARK: - ImgEncoder
 
-public struct ImgEncoder: Sendable {
-    var model: ImageEncoder_float32
+public struct ImgEncoder {
+    // MARK: Lifecycle
 
     init(configuration config: MLModelConfiguration = .init()) throws {
         let imgEncoderModel = try ImageEncoder_float32(configuration: config)
         model = imgEncoderModel
     }
 
+    // MARK: Public
+
     public func computeImgEmbedding(img: UIImage) async throws -> MLShapedArray<Float32> {
         let imgEmbedding = try await encode(image: img)
         return imgEmbedding
     }
 
-    /// Prediction queue
-    let queue = DispatchQueue(label: "imgencoder.predict")
+    // MARK: Internal
+
+    var model: ImageEncoder_float32
+
+    // MARK: Private
 
     private func encode(image: UIImage) async throws -> MLShapedArray<Float32> {
         do {
@@ -37,13 +42,11 @@ public struct ImgEncoder: Sendable {
                 throw ImageEncodingError.bufferConversionError
             }
 
-            let result = try queue.sync { try model.prediction(colorImage: buffer) }
+            let result = try model.prediction(colorImage: buffer)
             guard let embeddingFeature = result.featureValue(for: "embOutput"),
                   let multiArray = embeddingFeature.multiArrayValue else {
                 throw ImageEncodingError.predictionError
             }
-
-//            Logging.shared.debug("image \(multiArray)")
 
             return MLShapedArray<Float32>(converting: multiArray)
         } catch {
@@ -52,6 +55,8 @@ public struct ImgEncoder: Sendable {
         }
     }
 }
+
+// MARK: - ImageEncodingError
 
 // Define the custom errors
 enum ImageEncodingError: Error {
