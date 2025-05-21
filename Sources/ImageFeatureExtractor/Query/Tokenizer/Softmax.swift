@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  Softmax.swift
 //  ImageFeatureExtractor
 //
 //  Created by ailu on 2024/8/6.

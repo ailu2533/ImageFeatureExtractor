@@ -34,7 +34,8 @@ public struct CLIPTokenizer {
     }
 
     public func tokenize(text: String, truncation: Bool, maxLength: Int, paddingToken: Int32? = nil)
-        -> [Int32] {
+        -> [Int32]
+    {
         let fixText = text.split(separator: " ").joined(separator: " ").lowercased()
         // Logic for r"""<\|startoftext\|>|<\|endoftext\|>|'s|'t|'re|'ve|'m|'ll|'d|[\p{L}]+|[\p{N}]|[^\s\p{L}\p{N}]+"""
         // Implement this with for loop rather than regex so it is applicable with Swift 5.6.x
@@ -101,13 +102,13 @@ public struct CLIPTokenizer {
         // Now filter token further by split if it not a number nor a letter.
         tokens = tokens.flatMap { token -> [Substring] in
             // Remove special tokens (start and end)
-            guard token != "<|startoftext|>" && token != "<|endoftext|>" else {
+            guard token != "<|startoftext|>", token != "<|endoftext|>" else {
                 return []
             }
             // Skip these tokens
             guard
-                token != "'s" && token != "'t" && token != "'m" && token != "'d" && token != "'re"
-                && token != "'ve" && token != "'ll"
+                token != "'s", token != "'t", token != "'m", token != "'d", token != "'re",
+                token != "'ve", token != "'ll"
             else {
                 return [token]
             }
@@ -116,7 +117,7 @@ public struct CLIPTokenizer {
             for (i, character) in token.enumerated() {
                 let index = token.index(token.startIndex, offsetBy: i)
                 // Split further if it is not a letter nor a number.
-                if !character.isLetter && !character.isNumber {
+                if !character.isLetter, !character.isNumber {
                     if lastIndex < index {
                         tokens.append(token[lastIndex ..< index])
                     }
@@ -199,7 +200,7 @@ public struct CLIPTokenizer {
                     }
                 }
             }
-            guard let bigram = bigram else {
+            guard let bigram else {
                 break
             }
             var newWord = [String]()
@@ -213,7 +214,7 @@ public struct CLIPTokenizer {
                     newWord.append(contentsOf: word[i ..< j])
                 }
                 i = j
-                if word[i] == bigram.first && i < word.count - 1 && word[i + 1] == bigram.second {
+                if word[i] == bigram.first, i < word.count - 1, word[i + 1] == bigram.second {
                     newWord.append(bigram.first + bigram.second)
                     i += 2
                 } else {
@@ -308,17 +309,18 @@ public struct GPT2Tokenizer {
     }()
 
     public func decode(_ tokens: [Int32]) -> String {
-        tokens.map({
+        tokens.map {
             let token = decoder[$0, default: ""]
             guard !token.isEmpty else { return "" }
-            return token.unicodeScalars.map({
+            return token.unicodeScalars.map {
                 Self.byteDecoder[Int($0.value), default: "\($0)"]
-            }).joined()
-        }).joined()
+            }.joined()
+        }.joined()
     }
 
     public func tokenize(text: String, addSpecialTokens: Bool = true)
-        -> [Int32] {
+        -> [Int32]
+    {
         var fixText = text.split(separator: " ").joined(separator: " ")
         if text.hasPrefix(" ") {
             fixText = " " + fixText
@@ -390,9 +392,9 @@ public struct GPT2Tokenizer {
         }
         // token should match the token before sending to bpe mapping. Now do bpe merge.
         let bpeTokens = tokens.flatMap { token -> [String] in
-            let token = token.unicodeScalars.map({
+            let token = token.unicodeScalars.map {
                 Self.byteEncoder[Int($0.value), default: "\($0)"]
-            }).joined()
+            }.joined()
             return bpe(token: String(token))
         }
         // With bpeTokens, we can query vocabulary and return index now.
@@ -440,7 +442,7 @@ public struct GPT2Tokenizer {
                     }
                 }
             }
-            guard let bigram = bigram else {
+            guard let bigram else {
                 break
             }
             var newWord = [String]()
@@ -454,7 +456,7 @@ public struct GPT2Tokenizer {
                     newWord.append(contentsOf: word[i ..< j])
                 }
                 i = j
-                if word[i] == bigram.first && i < word.count - 1 && word[i + 1] == bigram.second {
+                if word[i] == bigram.first, i < word.count - 1, word[i + 1] == bigram.second {
                     newWord.append(bigram.first + bigram.second)
                     i += 2
                 } else {

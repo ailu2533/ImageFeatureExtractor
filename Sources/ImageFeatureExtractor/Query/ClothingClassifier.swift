@@ -54,7 +54,7 @@ public actor ClothingClassifier {
     // MARK: - Factory Method
 
     public static func create(loadTextEmbeddingFromJson: Bool) async throws -> ClothingClassifier {
-        return try await Task.detached(priority: .userInitiated) {
+        try await Task.detached(priority: .userInitiated) {
             try ClothingClassifier(loadTextEmbeddingFromJson: loadTextEmbeddingFromJson)
         }.value
     }
@@ -117,6 +117,12 @@ extension ClothingClassifier {
         return try await imgEncoder.encode(image: normalImage)
     }
 
+    public func cosine_similarity(A: MLShapedArray<Float32>, B: MLShapedArray<Float32>) -> Float {
+        let magnitude = vDSP.sumOfSquares(A.scalars).squareRoot() * vDSP.sumOfSquares(B.scalars).squareRoot()
+        let dotarray = vDSP.dot(A.scalars, B.scalars)
+        return dotarray / magnitude
+    }
+
     // MARK: - Private Methods
 
     private func calculateSimilarityScores(
@@ -152,13 +158,7 @@ extension ClothingClassifier {
         probabilities
             .sorted { $0.probability > $1.probability }
             .prefix(count)
-            .map { $0 }
-    }
-
-    private func cosine_similarity(A: MLShapedArray<Float32>, B: MLShapedArray<Float32>) -> Float {
-        let magnitude = vDSP.sumOfSquares(A.scalars).squareRoot() * vDSP.sumOfSquares(B.scalars).squareRoot()
-        let dotarray = vDSP.dot(A.scalars, B.scalars)
-        return dotarray / magnitude
+            .map(\.self)
     }
 
     private func similarity_score(text_features: MLShapedArray<Float32>, image_features: MLShapedArray<Float32>) -> Float {

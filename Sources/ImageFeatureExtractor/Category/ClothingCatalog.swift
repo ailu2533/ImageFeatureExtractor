@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  ClothingCatalog.swift
 //  ImageFeatureExtractor
 //
 //  Created by ailu on 2024/8/11.
@@ -52,7 +52,7 @@ public struct ClothingCategory: Identifiable, Sendable {
 
 // MARK: - ClothingCatalog
 
-public struct ClothingCatalog {
+public enum ClothingCatalog {
     public static let categories: [ClothingCategory] = [
         ClothingCategory(
             id: UUID(uuidString: "01913f53-1b26-7690-bde3-d520df805046")!,
@@ -151,11 +151,11 @@ public struct ClothingCatalog {
     ]
 
     public static var allSubcategories: [ClothingSubcategory] {
-        categories.flatMap { $0.subcategories }
+        categories.flatMap(\.subcategories)
     }
 
     public static var labels: [String] {
-        allSubcategories.map { $0.rawValue }
+        allSubcategories.map(\.rawValue)
     }
 
     public static var label2CategoryUUID: [String: UUID] {
@@ -186,6 +186,6 @@ public struct ClothingCatalog {
     }
 
     public static func localizedLabel(_ label: String) -> String {
-        return Bundle.module.localizedString(forKey: label, value: label, table: nil)
+        Bundle.module.localizedString(forKey: label, value: label, table: nil)
     }
 }

@@ -7,18 +7,18 @@
 
 import CustomColor
 import Foundation
+
 // import LemonUtils
 import UIKit
 
 public struct ImageFeatureExtractor: Sendable {
     // MARK: Lifecycle
 
-    public init() {
-    }
+    public init() {}
 
     // MARK: Public
 
-    public func execute(images: [ImagePairWithID], options: ImageFeatureOptions, classifier: ClothingClassifier? = nil) async -> [ImageFeature] {
+    public func execute(images: [ImagePairWithID], options: ImageFeatureOptions, classifier _: ClothingClassifier? = nil) async -> [ImageFeature] {
         await withTaskGroup(of: ImageFeature.self) { group in
             for imageAndUUID in images {
                 group.addTask { [imageAndUUID] in

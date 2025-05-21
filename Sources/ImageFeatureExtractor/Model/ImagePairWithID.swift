@@ -24,7 +24,7 @@ public struct ImagePairWithID: Sendable, Identifiable {
     public let originalImage: UIImage
 
     public var id: UUID {
-        return uuid
+        uuid
     }
 
     // MARK: Internal

@@ -40,6 +40,6 @@ public struct ImageFeature: Sendable, Identifiable {
     public let secondaryCategoryUUID: UUID?
 
     public var id: UUID {
-        return imageUUID
+        imageUUID
     }
 }

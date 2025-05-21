@@ -18,7 +18,7 @@ public extension UIDevice {
 //            return (deviceModel == "iPhone" || deviceModel == "iPad") && majorRevision >= 12
 //        }
 
-        return true
+        true
     }
 
     static let modelIsValid: Bool = {

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Utils {
+enum Utils {
     /// Time a block in ms
     static func time<T>(label: String, _ block: () -> T) -> T {
         let startTime = CFAbsoluteTimeGetCurrent()
@@ -30,17 +30,17 @@ struct Utils {
     static func dateNow() -> Int64 {
         // Use `Int` when we don't support 32-bits devices/OSes anymore.
         // Int crashes on iPhone 5c.
-        return Int64(Date().timeIntervalSince1970 * 1000)
+        Int64(Date().timeIntervalSince1970 * 1000)
     }
 
     /// Clamp a val to [min, max]
     static func clamp<T: Comparable>(_ val: T, _ vmin: T, _ vmax: T) -> T {
-        return min(max(vmin, val), vmax)
+        min(max(vmin, val), vmax)
     }
 
     /// Fake func that can throw.
     static func fakeThrowable<T>(_ input: T) throws -> T {
-        return input
+        input
     }
 
     /// Substring
@@ -55,7 +55,7 @@ struct Utils {
     }
 
     /// Invert a (k, v) dictionary
-    static func invert<K, V>(_ dict: Dictionary<K, V>) -> Dictionary<V, K> {
+    static func invert<K, V>(_ dict: [K: V]) -> [V: K] {
         var inverted: [V: K] = [:]
         for (k, v) in dict {
             inverted[v] = k

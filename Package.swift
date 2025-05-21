@@ -11,7 +11,8 @@ let package = Package(
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "ImageFeatureExtractor",
-            targets: ["ImageFeatureExtractor"]),
+            targets: ["ImageFeatureExtractor"]
+        ),
     ],
     dependencies: [
         .package(url: "https://github.com/ailu2533/CustomColor.git", branch: "main"),
@@ -32,7 +33,7 @@ let package = Package(
 
             ],
             resources: [
-                .process("Resources")
+                .process("Resources"),
             ]
         ),
 //        .testTarget(

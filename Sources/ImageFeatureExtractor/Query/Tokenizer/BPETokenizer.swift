@@ -6,7 +6,7 @@ import Foundation
 /// A tokenizer based on byte pair encoding.
 public struct BPETokenizer {
     /// A dictionary that maps pairs of tokens to the rank/order of the merge.
-    let merges: [TokenPair : Int]
+    let merges: [TokenPair: Int]
 
     /// A dictionary from of tokens to identifiers.
     let vocabulary: [String: Int]
@@ -43,8 +43,8 @@ public struct BPETokenizer {
     ///   - mergesURL: The URL of a text file containing merges.
     ///   - vocabularyURL: The URL of a JSON file containing the vocabulary.
     public init(mergesAt mergesURL: URL, vocabularyAt vocabularyURL: URL) throws {
-        self.merges = try Self.readMerges(url: mergesURL)
-        self.vocabulary = try! Self.readVocabulary(url: vocabularyURL)
+        merges = try Self.readMerges(url: mergesURL)
+        vocabulary = try! Self.readVocabulary(url: vocabularyURL)
     }
 
     /// Tokenizes an input string.
@@ -65,7 +65,7 @@ public struct BPETokenizer {
             tokens.append(contentsOf: repeatElement(padToken, count: minLen - tokens.count))
         }
 
-        let ids = tokens.map({ vocabulary[$0, default: unknownTokenID] })
+        let ids = tokens.map { vocabulary[$0, default: unknownTokenID] }
         return (tokens: tokens, tokenIDs: ids)
     }
 
@@ -91,7 +91,7 @@ public struct BPETokenizer {
     func encode(input: String) -> [String] {
         let normalized = input.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
         let words = normalized.split(separator: " ")
-        return words.flatMap({ encode(word: $0) })
+        return words.flatMap { encode(word: $0) }
     }
 
     /// Encode a single word into a sequence of tokens
@@ -145,9 +145,9 @@ public struct BPETokenizer {
             let remainingTokens = tokens[index...]
             if let startMatchIndex = remainingTokens.firstIndex(of: bigram.first) {
                 // Found a possible match, append everything before it
-                newTokens.append(contentsOf: tokens[index..<startMatchIndex])
+                newTokens.append(contentsOf: tokens[index ..< startMatchIndex])
 
-                if index < tokens.count - 1 && tokens[startMatchIndex + 1] == bigram.second {
+                if index < tokens.count - 1, tokens[startMatchIndex + 1] == bigram.second {
                     // Full match, merge
                     newTokens.append(bigram.first + bigram.second)
                     index = startMatchIndex + 2
@@ -166,10 +166,9 @@ public struct BPETokenizer {
     }
 }
 
-extension BPETokenizer {
-
+public extension BPETokenizer {
     /// A hashable tuple of strings
-    public struct TokenPair: Hashable {
+    struct TokenPair: Hashable {
         let first: String
         let second: String
 

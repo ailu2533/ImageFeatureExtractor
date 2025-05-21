@@ -17,11 +17,11 @@ public enum ImageLoadError: Error, LocalizedError {
     public var errorDescription: String? {
         switch self {
         case .invalidData:
-            return "无法加载图片数据"
+            "无法加载图片数据"
         case let .loadFailed(error):
-            return "加载图片失败: \(error.localizedDescription)"
+            "加载图片失败: \(error.localizedDescription)"
         case let .processingFailed(error):
-            return "处理图片失败: \(error.localizedDescription)"
+            "处理图片失败: \(error.localizedDescription)"
         }
     }
 }

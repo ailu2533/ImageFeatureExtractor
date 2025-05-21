@@ -19,16 +19,16 @@ extension BPETokenizer {
         let content = try String(contentsOf: url)
         let lines = content.split(separator: "\n")
 
-        let merges: [(TokenPair, Int)] = try lines.enumerated().compactMap { (index, line) in
+        let merges: [(TokenPair, Int)] = try lines.enumerated().compactMap { index, line in
             if line.hasPrefix("#") {
                 return nil
             }
             let pair = line.split(separator: " ")
             if pair.count != 2 {
-                throw FileReadError.invalidMergeFileLine(index+1)
+                throw FileReadError.invalidMergeFileLine(index + 1)
             }
-            return (TokenPair(String(pair[0]), String(pair[1])),index)
+            return (TokenPair(String(pair[0]), String(pair[1])), index)
         }
-        return [TokenPair : Int](uniqueKeysWithValues: merges)
+        return [TokenPair: Int](uniqueKeysWithValues: merges)
     }
 }
