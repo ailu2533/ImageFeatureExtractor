@@ -81,7 +81,7 @@ extension ClothingClassifier {
             return []
         }
 
-        let imgEmbedding = try await imgEncoder.computeImgEmbedding(img: normalImage)
+        let imgEmbedding = try await imgEncoder.encode(image: normalImage)
 
         // 计算所有标签的相似度
         let scores = calculateSimilarityScores(
@@ -95,6 +95,26 @@ extension ClothingClassifier {
 
         // 获取前N个最可能的标签
         return getTopNLabels(from: probabilities, count: topN)
+    }
+
+    public func encodeImage(imageURL: URL) async throws -> MLShapedArray<Float32> {
+        // 检查文件是否存在
+        guard FileManager.default.fileExists(atPath: imageURL.path) else {
+            throw ImageEncodingError.fileNotFound(imageURL)
+        }
+
+        // 读取图片数据
+        let data = try Data(contentsOf: imageURL)
+        guard let uiImage = UIImage(data: data) else {
+            throw ImageEncodingError.invalidImageData
+        }
+
+        // 处理透明度
+        guard let normalImage = uiImage.removeTransparency() else {
+            throw ImageEncodingError.transparencyRemovalFailed
+        }
+
+        return try await imgEncoder.encode(image: normalImage)
     }
 
     // MARK: - Private Methods
