@@ -34,8 +34,7 @@ public struct CLIPTokenizer {
     }
 
     public func tokenize(text: String, truncation: Bool, maxLength: Int, paddingToken: Int32? = nil)
-        -> [Int32]
-    {
+        -> [Int32] {
         let fixText = text.split(separator: " ").joined(separator: " ").lowercased()
         // Logic for r"""<\|startoftext\|>|<\|endoftext\|>|'s|'t|'re|'ve|'m|'ll|'d|[\p{L}]+|[\p{N}]|[^\s\p{L}\p{N}]+"""
         // Implement this with for loop rather than regex so it is applicable with Swift 5.6.x
@@ -319,8 +318,7 @@ public struct GPT2Tokenizer {
     }
 
     public func tokenize(text: String, addSpecialTokens: Bool = true)
-        -> [Int32]
-    {
+        -> [Int32] {
         var fixText = text.split(separator: " ").joined(separator: " ")
         if text.hasPrefix(" ") {
             fixText = " " + fixText

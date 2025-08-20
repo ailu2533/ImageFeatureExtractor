@@ -264,7 +264,7 @@ let byteEncoder: [UTF8.CodeUnit: String] = [
     158: "\u{0140}",
     159: "\u{0141}",
     160: "\u{0142}",
-    173: "\u{0143}",
+    173: "\u{0143}"
 ]
 
 let byteDecoder = Utils.invert(byteEncoder)

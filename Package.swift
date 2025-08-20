@@ -12,11 +12,11 @@ let package = Package(
         .library(
             name: "ImageFeatureExtractor",
             targets: ["ImageFeatureExtractor"]
-        ),
+        )
     ],
     dependencies: [
         .package(url: "https://github.com/ailu2533/CustomColor.git", branch: "main"),
-        .package(url: "https://github.com/apple/swift-algorithms.git", .upToNextMajor(from: "1.2.0")),
+        .package(url: "https://github.com/apple/swift-algorithms.git", .upToNextMajor(from: "1.2.0"))
 
 //        .package(url: "https://github.com/ailu2533/LemonUtils.git", branch: "main"),
     ],
@@ -33,9 +33,9 @@ let package = Package(
 
             ],
             resources: [
-                .process("Resources"),
+                .process("Resources")
             ]
-        ),
+        )
 //        .testTarget(
 //            name: "ImageFeatureExtractorTests",
 //            dependencies: ["ImageFeatureExtractor"]

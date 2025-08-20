@@ -6,10 +6,9 @@
 
 import CoreML
 
-
 /// Model Prediction Input Type
 @available(macOS 13.0, iOS 16.0, tvOS 16.0, watchOS 9.0, visionOS 1.0, *)
-public class TextEncoder_float32Input : MLFeatureProvider {
+public class TextEncoder_float32Input: MLFeatureProvider {
 
     /// prompt as 1 by 77 matrix of 32-bit integers
     public var prompt: MLMultiArray
@@ -33,13 +32,12 @@ public class TextEncoder_float32Input : MLFeatureProvider {
 
 }
 
-
 /// Model Prediction Output Type
 @available(macOS 13.0, iOS 16.0, tvOS 16.0, watchOS 9.0, visionOS 1.0, *)
-public class TextEncoder_float32Output : MLFeatureProvider {
+public class TextEncoder_float32Output: MLFeatureProvider {
 
     /// Source provided by CoreML
-    private let provider : MLFeatureProvider
+    private let provider: MLFeatureProvider
 
     /// embOutput as 1 by 512 matrix of floats
     public var embOutput: MLMultiArray {
@@ -60,7 +58,7 @@ public class TextEncoder_float32Output : MLFeatureProvider {
     }
 
     public init(embOutput: MLMultiArray) {
-        self.provider = try! MLDictionaryFeatureProvider(dictionary: ["embOutput" : MLFeatureValue(multiArray: embOutput)])
+        self.provider = try! MLDictionaryFeatureProvider(dictionary: ["embOutput": MLFeatureValue(multiArray: embOutput)])
     }
 
     public init(features: MLFeatureProvider) {
@@ -68,16 +66,15 @@ public class TextEncoder_float32Output : MLFeatureProvider {
     }
 }
 
-
 /// Class for model loading and prediction
 @available(macOS 13.0, iOS 16.0, tvOS 16.0, watchOS 9.0, visionOS 1.0, *)
 public class TextEncoder_float32 {
     public let model: MLModel
 
     /// URL of model assuming it was installed in the same bundle as this class
-    class var urlOfModelInThisBundle : URL {
+    class var urlOfModelInThisBundle: URL {
         let bundle = Bundle.module
-        return bundle.url(forResource: "TextEncoder_float32", withExtension:"mlmodelc")!
+        return bundle.url(forResource: "TextEncoder_float32", withExtension: "mlmodelc")!
     }
 
     /**
@@ -102,7 +99,7 @@ public class TextEncoder_float32 {
         - throws: an NSError object that describes the problem
     */
     public convenience init(configuration: MLModelConfiguration = MLModelConfiguration()) throws {
-        try self.init(contentsOf: type(of:self).urlOfModelInThisBundle, configuration: configuration)
+        try self.init(contentsOf: type(of: self).urlOfModelInThisBundle, configuration: configuration)
     }
 
     /**
@@ -293,7 +290,7 @@ public class TextEncoder_float32 {
     public func predictions(inputs: [TextEncoder_float32Input], options: MLPredictionOptions = MLPredictionOptions()) throws -> [TextEncoder_float32Output] {
         let batchIn = MLArrayBatchProvider(array: inputs)
         let batchOut = try model.predictions(from: batchIn, options: options)
-        var results : [TextEncoder_float32Output] = []
+        var results: [TextEncoder_float32Output] = []
         results.reserveCapacity(inputs.count)
         for i in 0..<batchOut.count {
             let outProvider = batchOut.features(at: i)
