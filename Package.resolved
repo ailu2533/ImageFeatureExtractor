@@ -1,5 +1,5 @@
 {
-  "originHash" : "cfa4050dd22c67c5d24d7d3f1960318f95b0daca8dcc8ed850fb939fab6a2c4a",
+  "originHash" : "d61fb7be24209737f7a347760321cc62ff8fd748e1011af944cdb4c5fd914b93",
   "pins" : [
     {
       "identity" : "colorkit",
@@ -15,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/ailu2533/CustomColor.git",
       "state" : {
-        "revision" : "c5bfb60f5a84d9f7106d0cba4092896c8af193f4",
-        "version" : "1.2.0"
+        "revision" : "7632500b0a6e160a668895ee3e88e675d0ebd32e",
+        "version" : "1.3.0"
       }
     },
     {
