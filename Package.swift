@@ -15,7 +15,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/ailu2533/CustomColor.git", .upToNextMajor(from: "1.1.0")),
+        .package(url: "https://github.com/ailu2533/CustomColor.git", .upToNextMajor(from: "1.2.0")),
         .package(url: "https://github.com/apple/swift-algorithms.git", .upToNextMajor(from: "1.2.0"))
 
 //        .package(url: "https://github.com/ailu2533/LemonUtils.git", branch: "main"),
