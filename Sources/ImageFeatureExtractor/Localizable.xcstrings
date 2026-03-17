@@ -1,1084 +1,2260 @@
 {
-  "sourceLanguage" : "en",
-  "strings" : {
-    "Accessories" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "配饰"
+  "sourceLanguage": "en",
+  "strings": {
+    "Accessories": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "配饰"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "配飾"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "配飾"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "配飾"
-          }
-        }
-      }
-    },
-    "Backpack" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "背包"
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "配飾"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "背包"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アクセサリー"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "背包"
-          }
-        }
-      }
-    },
-    "Bags" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "包袋"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Accessoires"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "包袋"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Accesorios"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "包袋"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Acessórios"
           }
         }
       }
     },
-    "Belly Bag" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "腰包"
+    "Backpack": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "背包"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "腰包"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "背包"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "腰包"
-          }
-        }
-      }
-    },
-    "Belt" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "腰带"
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "背包"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "腰帶"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "バックパック"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "腰帶"
-          }
-        }
-      }
-    },
-    "Blazer" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "西装外套"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rucksack"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "西裝外套"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mochila"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "西裝外套"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mochila"
           }
         }
       }
     },
-    "Blouse" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "女衬衫"
+    "Bags": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "包袋"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "女襯衫"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "包袋"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "女襯衫"
-          }
-        }
-      }
-    },
-    "Boots" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "靴子"
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "包袋"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "靴子"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "バッグ"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "靴子"
-          }
-        }
-      }
-    },
-    "Bottoms" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "下装"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Taschen"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "下裝"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bolsos"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "下裝"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bolsas"
           }
         }
       }
     },
-    "Bra" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "文胸"
+    "Belly Bag": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "腰包"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "胸罩"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "腰包"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "胸圍"
-          }
-        }
-      }
-    },
-    "Bracelet" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "手镯"
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "腰包"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "手鐲"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ウエストバッグ"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "手鐲"
-          }
-        }
-      }
-    },
-    "Briefcase" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "公文包"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bauchtasche"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "公事包"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Riñonera"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "公事包"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pochete"
           }
         }
       }
     },
-    "Brooch" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "胸针"
+    "Belt": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "腰带"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "胸針"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "腰帶"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "胸針"
-          }
-        }
-      }
-    },
-    "Cardigan" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "开衫"
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "腰帶"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "開衫"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ベルト"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "開衫"
-          }
-        }
-      }
-    },
-    "Clutch Bag" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "手拿包"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gürtel"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "手拿包"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cinturón"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "手拿包"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cinto"
           }
         }
       }
     },
-    "Coat" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "大衣"
+    "Blazer": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "西装外套"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "大衣"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "西裝外套"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "大衣"
-          }
-        }
-      }
-    },
-    "Down Jacket" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "羽绒服"
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "西裝外套"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "羽絨服"
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ブレザー"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "羽絨服"
-          }
-        }
-      }
-    },
-    "Dresses & Jumpsuits" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "连体服装"
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Blazer"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "連體服裝"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Blazer"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "連體服裝"
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Blazer"
           }
         }
       }
     },
-    "Earrings" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "耳环"
+    "Blouse": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "女衬衫"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "耳環"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "女襯衫"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "耳環"
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "女襯衫"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ブラウス"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bluse"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Blusa"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Blusa"
           }
         }
       }
     },
-    "Flats" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "平底鞋"
+    "Boots": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "靴子"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "平底鞋"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "靴子"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "平底鞋"
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "靴子"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ブーツ"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stiefel"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Botas"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Botas"
           }
         }
       }
     },
-    "Gloves" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "手套"
+    "Bottoms": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "下装"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "手套"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "下裝"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "手套"
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "下裝"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ボトムス"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unterteile"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Partes de abajo"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Partes de baixo"
           }
         }
       }
     },
-    "Handbag" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "手提包"
+    "Bra": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "文胸"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "手提包"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "胸罩"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "手提包"
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "胸圍"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ブラジャー"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "BH"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sujetador"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sutiã"
           }
         }
       }
     },
-    "Hat" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "帽子"
+    "Bracelet": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "手镯"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "帽子"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "手鐲"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "帽子"
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "手鐲"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ブレスレット"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Armband"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pulsera"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pulseira"
           }
         }
       }
     },
-    "Heels" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "高跟鞋"
+    "Briefcase": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "公文包"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "高跟鞋"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "公事包"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "高跟鞋"
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "公事包"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ブリーフケース"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aktentasche"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Maletín"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pasta"
           }
         }
       }
     },
-    "Hoodie" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "连帽衫"
+    "Brooch": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "胸针"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "連帽衫"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "胸針"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "連帽衫"
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "胸針"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ブローチ"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brosche"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Broche"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Broche"
           }
         }
       }
     },
-    "Jacket" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "夹克"
+    "Cardigan": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "开衫"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "夾克"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "開衫"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "夾克"
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "開衫"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "カーディガン"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Strickjacke"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cárdigan"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cardigã"
           }
         }
       }
     },
-    "Jeans" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "牛仔裤"
+    "Clutch Bag": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "手拿包"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "牛仔褲"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "手拿包"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "牛仔褲"
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "手拿包"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "クラッチバッグ"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clutch"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bolso de mano"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clutch"
           }
         }
       }
     },
-    "Jumpsuit" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "连身裤"
+    "Coat": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "大衣"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "連身褲"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "大衣"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "連身褲"
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "大衣"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "コート"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mantel"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrigo"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Casaco"
           }
         }
       }
     },
-    "Leggings" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "紧身裤"
+    "Down Jacket": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "羽绒服"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "緊身褲"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "羽絨服"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "緊身褲"
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "羽絨服"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ダウンジャケット"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Daunenjacke"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chaqueta de plumas"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jaqueta de plumas"
           }
         }
       }
     },
-    "One-Piece Dress" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "连衣裙"
+    "Dresses & Jumpsuits": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "连体服装"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "連衣裙"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "連體服裝"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "連身裙"
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "連體服裝"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ドレス・ジャンプスーツ"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kleider und Jumpsuits"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vestidos y monos"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vestidos e macacões"
           }
         }
       }
     },
-    "Outerwear" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "外套"
+    "Earrings": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "耳环"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "外套"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "耳環"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "外套"
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "耳環"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "イヤリング"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ohrringe"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pendientes"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brincos"
           }
         }
       }
     },
-    "Polo Shirt" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "polo衫"
+    "Flats": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "平底鞋"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "polo衫"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "平底鞋"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "polo衫"
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "平底鞋"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "フラットシューズ"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Flache Schuhe"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zapatos planos"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sapatilhas"
           }
         }
       }
     },
-    "Ring" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "戒指"
+    "Gloves": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "手套"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "戒指"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "手套"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "戒指"
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "手套"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "手袋"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Handschuhe"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guantes"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Luvas"
           }
         }
       }
     },
-    "Sandals" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "凉鞋"
+    "Handbag": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "手提包"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "涼鞋"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "手提包"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "涼鞋"
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "手提包"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ハンドバッグ"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Handtasche"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bolso de mano"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bolsa de mão"
           }
         }
       }
     },
-    "Shirt" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "衬衫"
+    "Hat": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "帽子"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "襯衫"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "帽子"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "襯衫"
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "帽子"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "帽子"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hut"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sombrero"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chapéu"
           }
         }
       }
     },
-    "Shoes" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "鞋子"
+    "Heels": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "高跟鞋"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "鞋子"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "高跟鞋"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "鞋子"
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "高跟鞋"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ヒール"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "High Heels"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tacones"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Saltos"
           }
         }
       }
     },
-    "Shorts" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "短裤"
+    "Hoodie": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "连帽衫"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "短褲"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "連帽衫"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "短褲"
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "連帽衫"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "パーカー"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kapuzenpullover"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sudadera con capucha"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Moletom com capuz"
           }
         }
       }
     },
-    "Skirt" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "裙子"
+    "Jacket": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "夹克"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "裙子"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "夾克"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "裙子"
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "夾克"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ジャケット"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jacke"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chaqueta"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jaqueta"
           }
         }
       }
     },
-    "Sling Bag" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "单肩包"
+    "Jeans": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "牛仔裤"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "單肩包"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "牛仔褲"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "單肩包"
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "牛仔褲"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ジーンズ"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jeans"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vaqueros"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jeans"
           }
         }
       }
     },
-    "Slippers" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "拖鞋"
+    "Jumpsuit": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "连身裤"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "拖鞋"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "連身褲"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "拖鞋"
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "連身褲"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ジャンプスーツ"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jumpsuit"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mono"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Macacão"
           }
         }
       }
     },
-    "Sports Shoes" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "运动鞋"
+    "Leggings": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "紧身裤"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "運動鞋"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "緊身褲"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "運動鞋"
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "緊身褲"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "レギンス"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leggings"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leggings"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leggings"
           }
         }
       }
     },
-    "Sunglasses" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "墨镜"
+    "One-Piece Dress": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "连衣裙"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "墨鏡"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "連衣裙"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "太陽眼鏡"
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "連身裙"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ワンピース"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kleid"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vestido"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vestido"
           }
         }
       }
     },
-    "Sweater" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "毛衣"
+    "Outerwear": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "外套"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "毛衣"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "外套"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "毛衣"
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "外套"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アウター"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oberbekleidung"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ropa de abrigo"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Agasalhos"
           }
         }
       }
     },
-    "T-Shirt" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "T恤"
+    "Polo Shirt": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "polo衫"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "T恤"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "polo衫"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "T恤"
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "polo衫"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ポロシャツ"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Poloshirt"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Polo"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Camisa polo"
           }
         }
       }
     },
-    "Tank Top" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "背心"
+    "Ring": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "戒指"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "背心"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "戒指"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "背心"
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "戒指"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "指輪"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ring"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anillo"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anel"
           }
         }
       }
     },
-    "Tops" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "上装"
+    "Sandals": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "凉鞋"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "上裝"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "涼鞋"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "上裝"
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "涼鞋"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "サンダル"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sandalen"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sandalias"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sandálias"
           }
         }
       }
     },
-    "Trousers" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "长裤"
+    "Shirt": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "衬衫"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "長褲"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "襯衫"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "長褲"
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "襯衫"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "シャツ"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hemd"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Camisa"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Camisa"
           }
         }
       }
     },
-    "Vest" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "马甲"
+    "Shoes": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "鞋子"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "馬甲"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "鞋子"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "背心"
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "鞋子"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "靴"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schuhe"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zapatos"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sapatos"
           }
         }
       }
     },
-    "Watch" : {
-      "localizations" : {
-        "zh" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "手表"
+    "Shorts": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "短裤"
           }
         },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "手錶"
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "短褲"
           }
         },
-        "zh-HK" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "手錶"
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "短褲"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ショートパンツ"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shorts"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pantalones cortos"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shorts"
+          }
+        }
+      }
+    },
+    "Skirt": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "裙子"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "裙子"
+          }
+        },
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "裙子"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "スカート"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rock"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Falda"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Saia"
+          }
+        }
+      }
+    },
+    "Sling Bag": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "单肩包"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "單肩包"
+          }
+        },
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "單肩包"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ショルダーバッグ"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Umhängetasche"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bolso bandolera"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bolsa tiracolo"
+          }
+        }
+      }
+    },
+    "Slippers": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拖鞋"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拖鞋"
+          }
+        },
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拖鞋"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "スリッパ"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hausschuhe"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zapatillas"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chinelos"
+          }
+        }
+      }
+    },
+    "Sports Shoes": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "运动鞋"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "運動鞋"
+          }
+        },
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "運動鞋"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "スポーツシューズ"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sportschuhe"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zapatillas deportivas"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tênis esportivos"
+          }
+        }
+      }
+    },
+    "Sunglasses": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "墨镜"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "墨鏡"
+          }
+        },
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "太陽眼鏡"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "サングラス"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sonnenbrille"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gafas de sol"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Óculos de sol"
+          }
+        }
+      }
+    },
+    "Sweater": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "毛衣"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "毛衣"
+          }
+        },
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "毛衣"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "セーター"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pullover"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Suéter"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Suéter"
+          }
+        }
+      }
+    },
+    "T-Shirt": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "T恤"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "T恤"
+          }
+        },
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "T恤"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tシャツ"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "T-Shirt"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Camiseta"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Camiseta"
+          }
+        }
+      }
+    },
+    "Tank Top": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "背心"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "背心"
+          }
+        },
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "背心"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "タンクトップ"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tanktop"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Camiseta de tirantes"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Regata"
+          }
+        }
+      }
+    },
+    "Tops": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "上装"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "上裝"
+          }
+        },
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "上裝"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "トップス"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oberteile"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Partes de arriba"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Partes de cima"
+          }
+        }
+      }
+    },
+    "Trousers": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "长裤"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "長褲"
+          }
+        },
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "長褲"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ズボン"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hosen"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pantalones"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Calças"
+          }
+        }
+      }
+    },
+    "Vest": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "马甲"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "馬甲"
+          }
+        },
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "背心"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ベスト"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weste"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chaleco"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Colete"
+          }
+        }
+      }
+    },
+    "Watch": {
+      "localizations": {
+        "zh": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "手表"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "手錶"
+          }
+        },
+        "zh-HK": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "手錶"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "腕時計"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uhr"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reloj"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Relógio"
           }
         }
       }
     }
   },
-  "version" : "1.0"
+  "version": "1.0"
 }

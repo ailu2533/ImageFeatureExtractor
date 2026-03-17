@@ -78,7 +78,7 @@ public enum ClothingCatalog {
         ClothingCategory(
             id: UUID(uuidString: "1b021e9a-859a-4f9c-ba9b-8882501cb8c8")!,
             rawValue: "Outerwear",
-            displayLabel: String(localized: "Outerwear"),
+            displayLabel: String(localized: "Outerwear", bundle: .module),
             subcategories: [
                 ClothingSubcategory(id: UUID(uuidString: "01910e4e-3b31-7ce9-9984-86db33b6dc41")!, rawValue: "Coat", displayLabel: String(localized: "Coat", bundle: .module)),
                 ClothingSubcategory(id: UUID(uuidString: "01910e4e-3b31-72a6-b06c-0684e40654c1")!, rawValue: "Jacket", displayLabel: String(localized: "Jacket", bundle: .module)),
